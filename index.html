@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Rocket Simulation</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 7px;
+        }
+    </style>
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body>
+    <!-- TODO: add form here -->
+    <form id="inputForm" action="https://handlers.education.launchcode.org/request-parrot" method="POST">
+        <label>Test Name
+            <input type="text" name="testName" id="nameInput"/>
+        </label>
+
+        <label>Test Date
+            <input type="date" name="testDate" id="dateInput"/>
+        </label>
+
+        <label>Rocket Type
+            <select name="rocketType" id="rocketTypeInput">
+                <option value="">* Select One *</option>
+                <option value="Brant">Brant</option>
+                <option value="Lynx">Lynx</option>
+                <option value="Orion">Orion</option>
+                <option value="Terrier">Terrier</option>
+            </select>
+        </label>
+
+        <label>Number of Rocket Boosters:
+            <input type="number" name="boosterCount" min="1" max="9" id="boosterCountInput"/>
+        </label>
+
+        <!-- Radio buttons do not need validation! Just make one of them checked by default using "checked"
+             like on line 43!!! -->
+        <label>Wind Rating:
+            <label><input type="radio" name="windRating" value="0" checked/>No Wind</label>
+            <label><input type="radio" name="windRating" value="10" />Mild</label>
+            <label><input type="radio" name="windRating" value="20" />Strong</label>
+        </label>
+        
+        <!-- This one doesn't need validation. It is off by default! -->
+        <label>Use production grade servers:
+            <input type="checkbox" name="productionServers" />
+        </label>
+
+        <button>Run Simulation</button>
+    </form>
+
+
+</body>
+
+</html>
